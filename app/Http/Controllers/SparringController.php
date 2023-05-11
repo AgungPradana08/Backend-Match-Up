@@ -24,4 +24,10 @@ class SparringController extends Controller
         Sparring::create($request -> all());
         return redirect('/home');
     }
+
+    public function detail($id)
+    {
+        $sparring = Sparring::find($id);
+        return view('sparring.detail', compact(['sparring']));
+    }
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Match Up</title>
-    <link rel="stylesheet" href="/css/sparringpage.css">
+    <link rel="stylesheet" href="/css/mabarpage.css">
 </head>
 <body>
     <section class="navbar" >
@@ -22,7 +22,7 @@
     </section>
     <section class="sparring-header" >
         <div class="banner">
-            PILIH LAWAN SPARRING
+            MABAR  OLAHRAGA
         </div>
     </section>
     <section class="sparring-search" >
@@ -56,22 +56,16 @@
         </button>
     </section>
     <section class="box-wrapper">
-        @foreach ($sparring as $sparring)
-        <a class="box" href="/sparring/{{$sparring->id}}/detail" >
+        <a class="box" href="#" >
            <button class="box-outer" style="width: 100%; height: 100%;" >
             <div class="box-top">
                 <div class="box-logo">
 
                 </div>
                 <div style="margin-left: 5%; width: 60%;" >
-                    <p style="font-size: 0.8vw;" >{{$sparring->olahraga}}</p>
-                    <p style="font-size: 1.5vw; font-family: opensans-bold; margin-top: 3%;" >{{$sparring->nama}}</p>
-                    <div class="access">
-                        {{$sparring->aksebilitas}}
-                    </div>
-                    <div class="age">
-                        15-17
-                    </div>
+                    <p style="font-size: 0.8vw;" >Futsal</p>
+                    <p style="font-size: 1.5vw;  font-family: opensans-bold; margin-top: 3%;" >TITLE</p>
+                    <p style="font-size: 0.8vw; margin-top: 3%" >Nama Pemilik</p>
                 </div>
             </div>
             <div class="box-bottom">
@@ -79,26 +73,34 @@
                     <div class="bottom-icon">
 
                     </div>
-                    {{$sparring->tanggal}}
+                    Waktu Dan Tanggal Bermain
                 </div>
                 <div class="line">
                     <div class="bottom-icon">
 
                     </div>
-                    {{$sparring->lokasi}}
+                    Lokasi Pertandingan
                 </div>
                 <div class="line">
                     <div class="bottom-icon">
 
                     </div>
-                    {{$sparring->biaya}}
+                    Biaya Pendaftaran
+                </div>
+                <hr>
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;" >
+                   <p>
+                    Slot Tersedia
+                   </p>
+                   <div class="access">
+                    Terbuka
+                    </div>
                 </div>
             </div>
            </button>
         </a>
-        @endforeach
+        
     </section> 
-    <a href="sparring/create">tambah</a>
     <section class="white-space" ></section>   
 </body>
 </html>

@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', [SparringController::class, 'index']);
-Route::get('/create', [SparringController::class, 'create']);
+Route::get('/sparring', [SparringController::class, 'index']);
+Route::get('/sparring/create', [SparringController::class, 'create']);
 Route::post('/sparring/store', [SparringController::class, 'store']);
+Route::get('/sparring/{id}/detail',[SparringController::class, 'detail']);
